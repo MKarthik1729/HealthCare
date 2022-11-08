@@ -1,8 +1,13 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 function DoctorAssociation() {
   return (
-    <div>DoctorAssociation</div>
+    <div>
+      <Navbar />
+      DoctorAssociation
+      
+    </div>
   )
 }
 
