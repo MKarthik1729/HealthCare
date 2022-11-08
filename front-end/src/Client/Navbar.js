@@ -8,7 +8,7 @@ function CollapsibleExample() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand><Linking to='client' inherit>Wealthy-Health</Linking></Navbar.Brand>
+        <Navbar.Brand><Linking to='/client' style={{fontWeight:700}}>Wealthy-Health</Linking></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -27,9 +27,11 @@ function CollapsibleExample() {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
+            <Nav.Link href="#deets"><Linking to='login'>Login</Linking></Nav.Link>
+            <Nav.Link >
+              <Linking to='register'>
+              Register
+              </Linking>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

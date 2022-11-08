@@ -5,18 +5,26 @@ import Client from './Client';
 import Doctor from './Doctor';
 import DoctorAssociation from './DoctorAssociation';
 import Home from './Home';
+import Login from './Client/Login';
+import Register from './Client/Register';
 function App() {
   return (
-    <div>
+    // <div>
       <Router>
         <Routes>
           <Route path='/' element={<Home />} exact />
-          <Route path='client' element={<Client />} />
+          <Route path='client' element={<Client />} exact>
+          {/* <Route path='/client' element={<Home />} exact /> */}
+
+            <Route path='login' element={<Login />} />
+            <Route path='register' element={<Register />} />
+
+          </Route>
           <Route path='doctor' element={<Doctor />} />
           <Route path='association' element={<DoctorAssociation />} />
         </Routes>
       </Router>
-    </div>
+    // </div>
   );
 }
 
